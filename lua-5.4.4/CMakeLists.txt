@@ -164,3 +164,7 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/LuaConfig.cmake"
               "${CMAKE_CURRENT_BINARY_DIR}/LuaConfigVersion.cmake"
         DESTINATION "lib/cmake"
 )
+
+# forces __fastcall as default calling convention.
+target_compile_options(luac PUBLIC /Gr)
+target_compile_options(lua_static PUBLIC /Gr)
